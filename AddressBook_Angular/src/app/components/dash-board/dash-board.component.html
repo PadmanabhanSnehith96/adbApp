@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <header class="container-fluid">
+    <h1>
+      <img [src]="logoUrl" class="img-fluid" width=15% /> {{title}}
+    </h1>
+  </header>
+</div>
+<div class="container">
+  <div class="card-columns">
+    <div class="card bg-secondary" *ngFor="let g of ['MALE','FEMALE']">
+      <div class="card-body text-centered">
+        <p class="card-text">
+          {{g}}S: <span class="badge">{{contacts| gender:g}}/
+            {{contacts.length}}
+            </span>
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
